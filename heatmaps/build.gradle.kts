@@ -63,6 +63,7 @@ android {
 }
 
 dependencies {
+    api(project(":library"))
     implementation(project(":clustering"))
     implementation(project(":data"))
     api(libs.play.services.maps)
@@ -82,6 +83,7 @@ dependencies {
     testImplementation(libs.kotlinx.coroutines.test)
     testImplementation(libs.robolectric)
     testImplementation(libs.mockito.core)
+    testImplementation(libs.mockito.kotlin)
 }
 
 tasks.register("instrumentTest") {

@@ -64,10 +64,11 @@ android {
 
 dependencies {
     implementation(project(":ui"))
-    implementation(project(":library"))
+    api(project(":library"))
     implementation(project(":data"))
     api(libs.play.services.maps)
-    implementation(libs.kotlinx.coroutines.android)
+    api(libs.kotlinx.coroutines.android)
+    api(libs.kotlinx.coroutines.core)
     implementation(libs.appcompat)
     implementation(libs.core.ktx)
     lintPublish(project(":lint-checks"))
@@ -83,6 +84,7 @@ dependencies {
     testImplementation(libs.kotlinx.coroutines.test)
     testImplementation(libs.robolectric)
     testImplementation(libs.mockito.core)
+    testImplementation(libs.mockito.kotlin)
 }
 
 tasks.register("instrumentTest") {

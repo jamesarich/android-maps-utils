@@ -47,4 +47,8 @@ dependencies {
     api(project(":data"))
     api(project(":heatmaps"))
     api(project(":ui"))
+    api(libs.play.services.maps)
+    api(libs.play.services.location)
+    api(libs.kotlinx.coroutines.android)
+    api(libs.kotlinx.coroutines.core)
 }

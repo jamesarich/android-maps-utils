@@ -65,7 +65,9 @@ android {
 
 dependencies {
     api(libs.play.services.maps)
-    implementation(libs.kotlinx.coroutines.android)
+    api(libs.play.services.location)
+    api(libs.kotlinx.coroutines.android)
+    api(libs.kotlinx.coroutines.core)
     implementation(libs.appcompat)
     implementation(libs.core.ktx)
     implementation(libs.startup.runtime)
@@ -83,6 +85,7 @@ dependencies {
     testImplementation(libs.kotlinx.coroutines.test)
     testImplementation(libs.robolectric)
     testImplementation(libs.mockito.core)
+    testImplementation(libs.mockito.kotlin)
 }
 
 tasks.register("instrumentTest") {
